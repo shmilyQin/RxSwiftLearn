@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,25 @@
 		478476912592EA3200507C48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4784768F2592EA3200507C48 /* Main.storyboard */; };
 		478476932592EA3500507C48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478476922592EA3500507C48 /* Assets.xcassets */; };
 		478476962592EA3500507C48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478476942592EA3500507C48 /* LaunchScreen.storyboard */; };
+		478476A92592EAF200507C48 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478476A62592EAF100507C48 /* BaseViewController.swift */; };
+		478476AA2592EAF200507C48 /* FlatMapLatestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478476A72592EAF200507C48 /* FlatMapLatestViewController.swift */; };
+		478476AB2592EAF200507C48 /* SymbolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478476A82592EAF200507C48 /* SymbolViewController.swift */; };
+		478476AE2592EEDC00507C48 /* SingleSymbolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478476AD2592EEDC00507C48 /* SingleSymbolViewController.swift */; };
+		47B44E1B2594883900F9EB51 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B44E182594883900F9EB51 /* NetworkService.swift */; };
+		47B44E1C2594883900F9EB51 /* ESRefresh+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B44E192594883900F9EB51 /* ESRefresh+Ext.swift */; };
+		47B44E1D2594883900F9EB51 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B44E1A2594883900F9EB51 /* ListViewModel.swift */; };
+		47B44E202594885100F9EB51 /* RefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B44E1F2594885100F9EB51 /* RefreshViewController.swift */; };
+		47B9773325959A040088A197 /* RxGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9773225959A040088A197 /* RxGestureViewController.swift */; };
+		47F09005259C71EE008D1657 /* ObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09004259C71EE008D1657 /* ObservableViewController.swift */; };
+		47F09009259C7A94008D1657 /* TraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09008259C7A94008D1657 /* TraitsViewController.swift */; };
+		47FECB3E259D65EA000FE39D /* ObservableAndObserverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FECB3D259D65EA000FE39D /* ObservableAndObserverViewController.swift */; };
+		47FECB41259D7858000FE39D /* ControlEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FECB40259D7858000FE39D /* ControlEventViewController.swift */; };
+		C23A451DB3C9932CB42D466C /* Pods_RxSymbols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFBFB18D4DDE2E68E7C3C7E /* Pods_RxSymbols.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BFBFB18D4DDE2E68E7C3C7E /* Pods_RxSymbols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSymbols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35285CBBE5CCBEB3FCC8660A /* Pods-RxSymbols.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSymbols.debug.xcconfig"; path = "Target Support Files/Pods-RxSymbols/Pods-RxSymbols.debug.xcconfig"; sourceTree = "<group>"; };
 		478476862592EA3200507C48 /* RxSymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		478476892592EA3200507C48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4784768B2592EA3200507C48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +40,20 @@
 		478476922592EA3500507C48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		478476952592EA3500507C48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		478476972592EA3500507C48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		478476A62592EAF100507C48 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		478476A72592EAF200507C48 /* FlatMapLatestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatMapLatestViewController.swift; sourceTree = "<group>"; };
+		478476A82592EAF200507C48 /* SymbolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolViewController.swift; sourceTree = "<group>"; };
+		478476AD2592EEDC00507C48 /* SingleSymbolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSymbolViewController.swift; sourceTree = "<group>"; };
+		47B44E182594883900F9EB51 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		47B44E192594883900F9EB51 /* ESRefresh+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ESRefresh+Ext.swift"; sourceTree = "<group>"; };
+		47B44E1A2594883900F9EB51 /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		47B44E1F2594885100F9EB51 /* RefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshViewController.swift; sourceTree = "<group>"; };
+		47B9773225959A040088A197 /* RxGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxGestureViewController.swift; sourceTree = "<group>"; };
+		47F09004259C71EE008D1657 /* ObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewController.swift; sourceTree = "<group>"; };
+		47F09008259C7A94008D1657 /* TraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsViewController.swift; sourceTree = "<group>"; };
+		47FECB3D259D65EA000FE39D /* ObservableAndObserverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableAndObserverViewController.swift; sourceTree = "<group>"; };
+		47FECB40259D7858000FE39D /* ControlEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlEventViewController.swift; sourceTree = "<group>"; };
+		FB6316F93CEE2D7696D75B7A /* Pods-RxSymbols.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSymbols.release.xcconfig"; path = "Target Support Files/Pods-RxSymbols/Pods-RxSymbols.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +61,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C23A451DB3C9932CB42D466C /* Pods_RxSymbols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26A0ACF542F54C1466C77E3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35285CBBE5CCBEB3FCC8660A /* Pods-RxSymbols.debug.xcconfig */,
+				FB6316F93CEE2D7696D75B7A /* Pods-RxSymbols.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		30CE0C9E9468E5D8C969BB85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BFBFB18D4DDE2E68E7C3C7E /* Pods_RxSymbols.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4784767D2592EA3200507C48 = {
 			isa = PBXGroup;
 			children = (
 				478476882592EA3200507C48 /* RxSymbols */,
 				478476872592EA3200507C48 /* Products */,
+				26A0ACF542F54C1466C77E3A /* Pods */,
+				30CE0C9E9468E5D8C969BB85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +106,10 @@
 		478476882592EA3200507C48 /* RxSymbols */ = {
 			isa = PBXGroup;
 			children = (
+				47F09003259C71DF008D1657 /* Observable */,
+				47B9772F2595998E0088A197 /* TapGesture */,
+				47B44E142594880100F9EB51 /* Refresh */,
+				478476A52592EADA00507C48 /* Symbol */,
 				478476892592EA3200507C48 /* AppDelegate.swift */,
 				4784768B2592EA3200507C48 /* SceneDelegate.swift */,
 				4784768D2592EA3200507C48 /* ViewController.swift */,
@@ -67,6 +121,47 @@
 			path = RxSymbols;
 			sourceTree = "<group>";
 		};
+		478476A52592EADA00507C48 /* Symbol */ = {
+			isa = PBXGroup;
+			children = (
+				478476A62592EAF100507C48 /* BaseViewController.swift */,
+				478476A72592EAF200507C48 /* FlatMapLatestViewController.swift */,
+				478476A82592EAF200507C48 /* SymbolViewController.swift */,
+				478476AD2592EEDC00507C48 /* SingleSymbolViewController.swift */,
+			);
+			path = Symbol;
+			sourceTree = "<group>";
+		};
+		47B44E142594880100F9EB51 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				47B44E192594883900F9EB51 /* ESRefresh+Ext.swift */,
+				47B44E1A2594883900F9EB51 /* ListViewModel.swift */,
+				47B44E182594883900F9EB51 /* NetworkService.swift */,
+				47B44E1F2594885100F9EB51 /* RefreshViewController.swift */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		47B9772F2595998E0088A197 /* TapGesture */ = {
+			isa = PBXGroup;
+			children = (
+				47B9773225959A040088A197 /* RxGestureViewController.swift */,
+			);
+			path = TapGesture;
+			sourceTree = "<group>";
+		};
+		47F09003259C71DF008D1657 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				47F09004259C71EE008D1657 /* ObservableViewController.swift */,
+				47F09008259C7A94008D1657 /* TraitsViewController.swift */,
+				47FECB3D259D65EA000FE39D /* ObservableAndObserverViewController.swift */,
+				47FECB40259D7858000FE39D /* ControlEventViewController.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4784769A2592EA3500507C48 /* Build configuration list for PBXNativeTarget "RxSymbols" */;
 			buildPhases = (
+				E2F7E57027732C0ACE978478 /* [CP] Check Pods Manifest.lock */,
 				478476822592EA3200507C48 /* Sources */,
 				478476832592EA3200507C48 /* Frameworks */,
 				478476842592EA3200507C48 /* Resources */,
+				8188089E998819218FB4ABF0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +229,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8188089E998819218FB4ABF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxSymbols/Pods-RxSymbols-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxSymbols/Pods-RxSymbols-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxSymbols/Pods-RxSymbols-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2F7E57027732C0ACE978478 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxSymbols-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		478476822592EA3200507C48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B44E1D2594883900F9EB51 /* ListViewModel.swift in Sources */,
+				47F09009259C7A94008D1657 /* TraitsViewController.swift in Sources */,
 				4784768E2592EA3200507C48 /* ViewController.swift in Sources */,
+				478476A92592EAF200507C48 /* BaseViewController.swift in Sources */,
+				47B44E1B2594883900F9EB51 /* NetworkService.swift in Sources */,
+				47B9773325959A040088A197 /* RxGestureViewController.swift in Sources */,
+				47FECB3E259D65EA000FE39D /* ObservableAndObserverViewController.swift in Sources */,
+				478476AB2592EAF200507C48 /* SymbolViewController.swift in Sources */,
 				4784768A2592EA3200507C48 /* AppDelegate.swift in Sources */,
+				478476AA2592EAF200507C48 /* FlatMapLatestViewController.swift in Sources */,
+				47FECB41259D7858000FE39D /* ControlEventViewController.swift in Sources */,
+				47F09005259C71EE008D1657 /* ObservableViewController.swift in Sources */,
+				478476AE2592EEDC00507C48 /* SingleSymbolViewController.swift in Sources */,
 				4784768C2592EA3200507C48 /* SceneDelegate.swift in Sources */,
+				47B44E1C2594883900F9EB51 /* ESRefresh+Ext.swift in Sources */,
+				47B44E202594885100F9EB51 /* RefreshViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +435,7 @@
 		};
 		4784769B2592EA3500507C48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35285CBBE5CCBEB3FCC8660A /* Pods-RxSymbols.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +454,7 @@
 		};
 		4784769C2592EA3500507C48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB6316F93CEE2D7696D75B7A /* Pods-RxSymbols.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
