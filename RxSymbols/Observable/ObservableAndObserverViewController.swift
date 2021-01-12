@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RxSwift
 class ObservableAndObserverViewController: BaseViewController {
 
     override func viewDidLoad() {
