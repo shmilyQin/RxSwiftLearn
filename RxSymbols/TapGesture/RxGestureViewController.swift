@@ -10,6 +10,7 @@ import RxCocoa
 import RxSwift
 import RxGesture
 class RxGestureViewController: BaseViewController {
+    var currentRoration:CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         initInterface()
@@ -70,23 +71,33 @@ class RxGestureViewController: BaseViewController {
 //            }).disposed(by: disposeBag)
         
         //MARK:-----rotation旋转-----
-//        let rotationEvent = tapView.rx.rotationGesture().share(replay: 1, scope: .whileConnected)
-//        rotationEvent
-//            .when(.possible, .began, .changed)
-//            .asRotation()
-//            .subscribe(onNext: {[weak self] rotation, _ in
-//                self?.label.text = String(format: "%.2f rad", rotation)
-//                self?.tapView.transform = CGAffineTransform(rotationAngle: rotation)
-//            })
-//            .disposed(by: disposeBag)
-//
-//        rotationEvent
-//            .when(.ended)
-//            .subscribe(onNext: { _ in
-//
-//            })
-//            .disposed(by: disposeBag)
+        let rotationEvent = tapView.rx.rotationGesture().share(replay: 1, scope: .whileConnected)
+        rotationEvent
+            .when(.possible, .began, .changed)
+            .asRotation()
+            .subscribe(onNext: {[weak self] rotation, _ in
+                let tem = rotation + (self?.currentRoration ?? 0)
+                self?.label.text = String(format: "%.2f rad", tem)
+                self?.tapView.transform = CGAffineTransform(rotationAngle: tem)
+                
+            })
+            .disposed(by: disposeBag)
+
+        rotationEvent
+            .when(.ended)
+            .asRotation()
+            .subscribe(onNext: {[weak self] rotation, _ in
+                self?.currentRoration = rotation + (self?.currentRoration ?? 0)
+                print("current\(rotation)")
+            })
+            .disposed(by: disposeBag)
+//        let rotationGes = UIRotationGestureRecognizer.init(target: self, action: #selector(rorationAction(_:)))
+//        tapView.addGestureRecognizer(rotationGes)
     }
+//    @objc func rorationAction(_ sender:UIRotationGestureRecognizer){
+//        self.label.text = String(format: "%.2f rad", sender.rotation)
+//        self.tapView.transform = CGAffineTransform(rotationAngle: sender.rotation)
+//    }
     //MARK:-----懒加载-----
     lazy var tapView: UIView = {
         let value = UIView(frame: CGRect(x: self.view.bounds.width/2 - 100, y: self.view.bounds.height/2 - 100, width: 200, height: 200))
@@ -96,7 +107,7 @@ class RxGestureViewController: BaseViewController {
     lazy var label: UILabel = {
         let value = UILabel()
         value.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        value.text = "123"
+        value.text = ""
         value.textAlignment = .center
         value.font = .systemFont(ofSize: 12)
         return value
