@@ -32,7 +32,7 @@ class SingleSymbolViewController: BaseViewController {
 //        groupBySymbol()
 //        elementAtSymbol()
 //        distinctUntilChangedSymbol()
-//        noShakeSymbol()
+        noShakeSymbol()
 //        bufferSymbol()
 //        ambSymbol()
     }
@@ -262,6 +262,7 @@ extension SingleSymbolViewController{
 //        debounce和throttle都有防抖
 //        debounce在指定时间获取最后一个元素
 //        throttle在指定时间段获取第一个和最后一个
+//        throttle如有latest参数为false 则获取第一个
         let subject = Observable.from([1,2,3,4])
         subject.debounce(.seconds(1), scheduler: MainScheduler.instance)
             .subscribe(onNext: { (number) in
@@ -270,6 +271,10 @@ extension SingleSymbolViewController{
         subject.throttle(.seconds(1), scheduler: MainScheduler.instance)
             .subscribe(onNext: { (number) in
                 print("throttle====\(number)")
+            }).disposed(by: disposeBag)
+        subject.throttle(.seconds(1), latest: false, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { (number) in
+                print("throttle+latest====\(number)")
             }).disposed(by: disposeBag)
     }
 }

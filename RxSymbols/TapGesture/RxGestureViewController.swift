@@ -79,9 +79,9 @@ class RxGestureViewController: BaseViewController {
                 let tem = rotation + (self?.currentRoration ?? 0)
                 self?.label.text = String(format: "%.2f rad", tem)
                 self?.tapView.transform = CGAffineTransform(rotationAngle: tem)
-                
             })
             .disposed(by: disposeBag)
+        
 
         rotationEvent
             .when(.ended)
@@ -91,13 +91,7 @@ class RxGestureViewController: BaseViewController {
                 print("current\(rotation)")
             })
             .disposed(by: disposeBag)
-//        let rotationGes = UIRotationGestureRecognizer.init(target: self, action: #selector(rorationAction(_:)))
-//        tapView.addGestureRecognizer(rotationGes)
     }
-//    @objc func rorationAction(_ sender:UIRotationGestureRecognizer){
-//        self.label.text = String(format: "%.2f rad", sender.rotation)
-//        self.tapView.transform = CGAffineTransform(rotationAngle: sender.rotation)
-//    }
     //MARK:-----懒加载-----
     lazy var tapView: UIView = {
         let value = UIView(frame: CGRect(x: self.view.bounds.width/2 - 100, y: self.view.bounds.height/2 - 100, width: 200, height: 200))

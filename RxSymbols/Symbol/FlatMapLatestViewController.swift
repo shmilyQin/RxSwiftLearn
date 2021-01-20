@@ -33,10 +33,10 @@ class FlatMapLatestViewController: BaseViewController {
         }).disposed(by: disposeBag)
     }
     func getFirst(content:String) -> Observable<String> {
-        return Observable.just("这是第一个").delay(.seconds(5), scheduler: MainScheduler.instance)
+        return Observable.just("这是第一个\(content)").delay(.seconds(5), scheduler: MainScheduler.instance)
     }
     func getSecond(content:String) -> Observable<String> {
-        return Observable.just("这是第二个").delay(.seconds(2), scheduler: MainScheduler.instance)
+        return Observable.just("这是第二个\(content)").delay(.seconds(2), scheduler: MainScheduler.instance)
     }
     /*
     // MARK: - Navigation
@@ -44,7 +44,7 @@ class FlatMapLatestViewController: BaseViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Pass the selected object to the new view controller.111
     }
     */
 
