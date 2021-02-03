@@ -118,3 +118,15 @@ extension SymbolViewController{
         return Observable.just("这是第二个").delay(.seconds(2), scheduler: MainScheduler.instance)
     }
 }
+//MARK:-----amb-----
+extension SingleSymbolViewController{
+    func ambSymbol() {
+        //        谁先发出就用谁,忽略其他
+        let subject1 = Observable.from([1,2,3]).delay(.seconds(3), scheduler: MainScheduler.instance)
+        let subject2 = Observable.from([4,5,6]).delay(.seconds(1), scheduler: MainScheduler.instance)
+        let subject3 = Observable.from([7,8,9]).delay(.seconds(2), scheduler: MainScheduler.instance)
+        Observable.amb([subject1,subject2,subject3]).subscribe(onNext: { (number) in
+            print(number)
+        }).disposed(by: disposeBag)
+    }
+}

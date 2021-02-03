@@ -13,6 +13,7 @@ class SingleSymbolViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "单序列"
+        materializeSymbol()
 //        windowSymbol()
 //        timeoutSymbol()
 //        takeSymbol()
@@ -32,11 +33,20 @@ class SingleSymbolViewController: BaseViewController {
 //        groupBySymbol()
 //        elementAtSymbol()
 //        distinctUntilChangedSymbol()
-        noShakeSymbol()
+//        noShakeSymbol()
 //        bufferSymbol()
-//        ambSymbol()
+        
     }
 
+}
+//MARK:-----Materialize-----
+extension SingleSymbolViewController{
+    func materializeSymbol(){
+        Observable.of(1, 2, 1)
+            .materialize()
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+    }
 }
 //MARK:-----window-----
 extension SingleSymbolViewController{
@@ -289,16 +299,3 @@ extension SingleSymbolViewController{
             } ).disposed(by: disposeBag)
     }
 }
-//MARK:-----amb-----
-extension SingleSymbolViewController{
-    func ambSymbol() {
-        //        谁先发出就用谁,忽略其他
-        let subject1 = Observable.from([1,2,3]).delay(.seconds(3), scheduler: MainScheduler.instance)
-        let subject2 = Observable.from([4,5,6]).delay(.seconds(1), scheduler: MainScheduler.instance)
-        let subject3 = Observable.from([7,8,9]).delay(.seconds(2), scheduler: MainScheduler.instance)
-        Observable.amb([subject1,subject2,subject3]).subscribe(onNext: { (number) in
-            print(number)
-        }).disposed(by: disposeBag)
-    }
-}
-

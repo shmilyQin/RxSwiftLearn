@@ -40,7 +40,7 @@ class ListViewModel: LYBaseViewModel{
 
         let headerDriver = input.headerRefreshIng.startWith(()).flatMapLatest{self.networkService.getRandomResult()}
         let endDriver =  input.footerRefreshIng.flatMapLatest{self.networkService.getRandomResult()}
-        let endRefreshing = Driver.combineLatest(headerDriver,endDriver).map{_ in true}
+        let endRefreshing = Driver.merge(headerDriver,endDriver).map{_ in true}
         return Output(headerDriver: headerDriver, endDriver: endDriver, endRefreshing: endRefreshing)
     }
 }
