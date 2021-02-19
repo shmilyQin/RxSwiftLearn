@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47415E2825DF485A00BF6F89 /* Rx+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E2725DF485A00BF6F89 /* Rx+Ext.swift */; };
+		47415E3C25DF49C400BF6F89 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E3B25DF49C400BF6F89 /* ResponseModel.swift */; };
+		47415E4025DF50BD00BF6F89 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E3F25DF50BD00BF6F89 /* NewsListViewController.swift */; };
+		47415E4425DF54B300BF6F89 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E4325DF54B300BF6F89 /* NewsDetailViewController.swift */; };
+		47415E4825DF550300BF6F89 /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E4725DF550300BF6F89 /* NewsDetailViewModel.swift */; };
+		47415E4B25DF556A00BF6F89 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E4A25DF556A00BF6F89 /* API.swift */; };
+		47415E5325DF5A7300BF6F89 /* NewsDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E5225DF5A7200BF6F89 /* NewsDetailModel.swift */; };
 		4784768A2592EA3200507C48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478476892592EA3200507C48 /* AppDelegate.swift */; };
 		4784768C2592EA3200507C48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4784768B2592EA3200507C48 /* SceneDelegate.swift */; };
 		4784768E2592EA3200507C48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4784768D2592EA3200507C48 /* ViewController.swift */; };
@@ -32,6 +39,13 @@
 /* Begin PBXFileReference section */
 		0BFBFB18D4DDE2E68E7C3C7E /* Pods_RxSymbols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSymbols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35285CBBE5CCBEB3FCC8660A /* Pods-RxSymbols.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSymbols.debug.xcconfig"; path = "Target Support Files/Pods-RxSymbols/Pods-RxSymbols.debug.xcconfig"; sourceTree = "<group>"; };
+		47415E2725DF485A00BF6F89 /* Rx+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Ext.swift"; sourceTree = "<group>"; };
+		47415E3B25DF49C400BF6F89 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		47415E3F25DF50BD00BF6F89 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		47415E4325DF54B300BF6F89 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		47415E4725DF550300BF6F89 /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
+		47415E4A25DF556A00BF6F89 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		47415E5225DF5A7200BF6F89 /* NewsDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailModel.swift; sourceTree = "<group>"; };
 		478476862592EA3200507C48 /* RxSymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		478476892592EA3200507C48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4784768B2592EA3200507C48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +99,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		47415E2525DF484100BF6F89 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				47415E2725DF485A00BF6F89 /* Rx+Ext.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		47415E3A25DF49AF00BF6F89 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				47415E3B25DF49C400BF6F89 /* ResponseModel.swift */,
+				47415E4A25DF556A00BF6F89 /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		47415E3E25DF50AD00BF6F89 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				47415E4225DF549B00BF6F89 /* detail */,
+				47415E3F25DF50BD00BF6F89 /* NewsListViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		47415E4225DF549B00BF6F89 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				47415E4325DF54B300BF6F89 /* NewsDetailViewController.swift */,
+				47415E4725DF550300BF6F89 /* NewsDetailViewModel.swift */,
+				47415E5225DF5A7200BF6F89 /* NewsDetailModel.swift */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
 		4784767D2592EA3200507C48 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +156,9 @@
 		478476882592EA3200507C48 /* RxSymbols */ = {
 			isa = PBXGroup;
 			children = (
+				47415E3E25DF50AD00BF6F89 /* News */,
+				47415E3A25DF49AF00BF6F89 /* Network */,
+				47415E2525DF484100BF6F89 /* Helper */,
 				47F09003259C71DF008D1657 /* Observable */,
 				47B9772F2595998E0088A197 /* TapGesture */,
 				47B44E142594880100F9EB51 /* Refresh */,
@@ -276,15 +329,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47415E4B25DF556A00BF6F89 /* API.swift in Sources */,
+				47415E4825DF550300BF6F89 /* NewsDetailViewModel.swift in Sources */,
 				47B44E1D2594883900F9EB51 /* ListViewModel.swift in Sources */,
 				47F09009259C7A94008D1657 /* TraitsViewController.swift in Sources */,
 				4784768E2592EA3200507C48 /* ViewController.swift in Sources */,
 				478476A92592EAF200507C48 /* BaseViewController.swift in Sources */,
+				47415E4425DF54B300BF6F89 /* NewsDetailViewController.swift in Sources */,
+				47415E4025DF50BD00BF6F89 /* NewsListViewController.swift in Sources */,
 				47B44E1B2594883900F9EB51 /* NetworkService.swift in Sources */,
+				47415E5325DF5A7300BF6F89 /* NewsDetailModel.swift in Sources */,
 				47B9773325959A040088A197 /* RxGestureViewController.swift in Sources */,
 				47FECB3E259D65EA000FE39D /* ObservableAndObserverViewController.swift in Sources */,
 				478476AB2592EAF200507C48 /* SymbolViewController.swift in Sources */,
+				47415E2825DF485A00BF6F89 /* Rx+Ext.swift in Sources */,
 				4784768A2592EA3200507C48 /* AppDelegate.swift in Sources */,
+				47415E3C25DF49C400BF6F89 /* ResponseModel.swift in Sources */,
 				478476AA2592EAF200507C48 /* FlatMapLatestViewController.swift in Sources */,
 				47FECB41259D7858000FE39D /* ControlEventViewController.swift in Sources */,
 				47F09005259C71EE008D1657 /* ObservableViewController.swift in Sources */,

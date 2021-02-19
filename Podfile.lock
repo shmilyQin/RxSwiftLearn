@@ -1,6 +1,15 @@
 PODS:
+  - Alamofire (5.4.1)
   - Differentiator (4.0.1)
   - ESPullToRefresh (2.9.3)
+  - HandyJSON (5.0.2)
+  - Kingfisher (6.0.1)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - ProgressHUD (13.4)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -14,32 +23,50 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - ESPullToRefresh (~> 2.9.3)
+  - HandyJSON (~> 5.0.2)
+  - Kingfisher (~> 6.0.1)
+  - Moya/RxSwift (= 14.0.0)
+  - ProgressHUD (~> 13.4)
   - RxCocoa (~> 5.1.1)
   - RxDataSources (~> 4.0.1)
   - RxGesture (~> 3.0.2)
+  - SwiftyJSON (~> 5.0.0)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - Alamofire
     - Differentiator
     - ESPullToRefresh
+    - HandyJSON
+    - Kingfisher
+    - Moya
+    - ProgressHUD
     - RxCocoa
     - RxDataSources
     - RxGesture
     - RxRelay
     - RxSwift
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  Kingfisher: adde87a4f74f6a3845395769354efff593581740
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  ProgressHUD: 137a7fc677487c5581668f4490563124fb35c232
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: e6124107aa7baa5900f0921477d914c7dc2eadec
+PODFILE CHECKSUM: 98435a3b81dc319b0a3b16ecb91703c29b60266c
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
