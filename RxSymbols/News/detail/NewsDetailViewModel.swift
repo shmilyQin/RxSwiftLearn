@@ -26,6 +26,7 @@ class NewsDetailViewModel:LYBaseViewModel {
         return Output(datasources: output)
     }
     func getNewsDetail(type:String) -> Single<[NewsDetailModel]>{
-        return lyApiProvider.rx.LYRequest(.news_detail(type: type)).mapArrayModel(NewsDetailModel.self, designatedPath: "result.data")
+        return lyApiProvider.rx.LYRequest(.news_detail(type: type))
+            .mapArrayModel(NewsDetailModel.self, designatedPath: "result.data")
     }
 }

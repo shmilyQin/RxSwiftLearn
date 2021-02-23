@@ -23,7 +23,11 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - RxWebKit (1.0.2):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - SwiftyJSON (5.0.0)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - ESPullToRefresh (~> 2.9.3)
@@ -34,7 +38,9 @@ DEPENDENCIES:
   - RxCocoa (~> 5.1.1)
   - RxDataSources (~> 4.0.1)
   - RxGesture (~> 3.0.2)
+  - RxWebKit (~> 1.0.2)
   - SwiftyJSON (~> 5.0.0)
+  - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
@@ -50,7 +56,9 @@ SPEC REPOS:
     - RxGesture
     - RxRelay
     - RxSwift
+    - RxWebKit
     - SwiftyJSON
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
@@ -65,8 +73,10 @@ SPEC CHECKSUMS:
   RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxWebKit: a3085e7cd8b57182b452692686675702474014dd
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 98435a3b81dc319b0a3b16ecb91703c29b60266c
+PODFILE CHECKSUM: 97f10305f98631747f71fdac971439ac43be7dd6
 
 COCOAPODS: 1.10.1

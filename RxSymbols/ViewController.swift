@@ -34,10 +34,16 @@ class ViewController: UIViewController {
             self?.navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: dispose)
         
-        let array = [(title:"序列",VCName:"ObservableViewController"),(title:"特征序列",VCName:"TraitsViewController"),
-                     (title:"可监听序列&观察者",VCName:"ObservableAndObserverViewController"),(title:"针对单序列的操作符",VCName:"SingleSymbolViewController"),
-                     (title:"针对多序列的操作符",VCName:"SymbolViewController"),(title:"flatMap",VCName:"FlatMapLatestViewController"),
-                     (title:"刷新",VCName:"RefreshViewController"),(title:"Rx手势",VCName:"RxGestureViewController"),(title:"新闻",VCName:"NewsListViewController")]
+        let array = [(title:"序列",VCName:"ObservableViewController"),
+                     (title:"特征序列",VCName:"TraitsViewController"),
+                     (title:"可监听序列&观察者",VCName:"ObservableAndObserverViewController"),
+                     (title:"针对单序列的操作符",VCName:"SingleSymbolViewController"),
+                     (title:"针对多序列的操作符",VCName:"SymbolViewController"),
+                     (title:"flatMap",VCName:"FlatMapLatestViewController"),
+                     (title:"刷新",VCName:"RefreshViewController"),
+                     (title:"Rx手势",VCName:"RxGestureViewController"),
+                     (title:"新闻",VCName:"NewsListViewController"),
+                     (title:"WKWebView",VCName:"RxWebViewController")]
         dataSource.accept([SectionModel<String, (title:String,VCName:String)>.init(model: "", items: array)])
         
     }
@@ -52,7 +58,6 @@ extension ViewController{
     //MARK:-----界面-----
     func initInterface() {
         view.addSubview(myTableView)
-
     }
     func initDataSource(){
         bindData()

@@ -29,6 +29,10 @@
 		47B44E1D2594883900F9EB51 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B44E1A2594883900F9EB51 /* ListViewModel.swift */; };
 		47B44E202594885100F9EB51 /* RefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B44E1F2594885100F9EB51 /* RefreshViewController.swift */; };
 		47B9773325959A040088A197 /* RxGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9773225959A040088A197 /* RxGestureViewController.swift */; };
+		47C0A81425E48D80009308C1 /* RxWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0A81325E48D80009308C1 /* RxWebViewController.swift */; };
+		47C0A81825E48FA6009308C1 /* InvokeJSFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0A81725E48FA5009308C1 /* InvokeJSFunctionViewController.swift */; };
+		47C0A81B25E49104009308C1 /* ObservingJSFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0A81A25E49104009308C1 /* ObservingJSFunctionViewController.swift */; };
+		47C0A81E25E49ACE009308C1 /* OtherObservingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0A81D25E49ACE009308C1 /* OtherObservingViewController.swift */; };
 		47F09005259C71EE008D1657 /* ObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09004259C71EE008D1657 /* ObservableViewController.swift */; };
 		47F09009259C7A94008D1657 /* TraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09008259C7A94008D1657 /* TraitsViewController.swift */; };
 		47FECB3E259D65EA000FE39D /* ObservableAndObserverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FECB3D259D65EA000FE39D /* ObservableAndObserverViewController.swift */; };
@@ -63,6 +67,10 @@
 		47B44E1A2594883900F9EB51 /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		47B44E1F2594885100F9EB51 /* RefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshViewController.swift; sourceTree = "<group>"; };
 		47B9773225959A040088A197 /* RxGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxGestureViewController.swift; sourceTree = "<group>"; };
+		47C0A81325E48D80009308C1 /* RxWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxWebViewController.swift; sourceTree = "<group>"; };
+		47C0A81725E48FA5009308C1 /* InvokeJSFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvokeJSFunctionViewController.swift; sourceTree = "<group>"; };
+		47C0A81A25E49104009308C1 /* ObservingJSFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservingJSFunctionViewController.swift; sourceTree = "<group>"; };
+		47C0A81D25E49ACE009308C1 /* OtherObservingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherObservingViewController.swift; sourceTree = "<group>"; };
 		47F09004259C71EE008D1657 /* ObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewController.swift; sourceTree = "<group>"; };
 		47F09008259C7A94008D1657 /* TraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsViewController.swift; sourceTree = "<group>"; };
 		47FECB3D259D65EA000FE39D /* ObservableAndObserverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableAndObserverViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +164,7 @@
 		478476882592EA3200507C48 /* RxSymbols */ = {
 			isa = PBXGroup;
 			children = (
+				47C0A81225E48D6A009308C1 /* Web */,
 				47415E3E25DF50AD00BF6F89 /* News */,
 				47415E3A25DF49AF00BF6F89 /* Network */,
 				47415E2525DF484100BF6F89 /* Helper */,
@@ -202,6 +211,17 @@
 				47B9773225959A040088A197 /* RxGestureViewController.swift */,
 			);
 			path = TapGesture;
+			sourceTree = "<group>";
+		};
+		47C0A81225E48D6A009308C1 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				47C0A81325E48D80009308C1 /* RxWebViewController.swift */,
+				47C0A81725E48FA5009308C1 /* InvokeJSFunctionViewController.swift */,
+				47C0A81A25E49104009308C1 /* ObservingJSFunctionViewController.swift */,
+				47C0A81D25E49ACE009308C1 /* OtherObservingViewController.swift */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 		47F09003259C71DF008D1657 /* Observable */ = {
@@ -339,7 +359,9 @@
 				47415E4025DF50BD00BF6F89 /* NewsListViewController.swift in Sources */,
 				47B44E1B2594883900F9EB51 /* NetworkService.swift in Sources */,
 				47415E5325DF5A7300BF6F89 /* NewsDetailModel.swift in Sources */,
+				47C0A81E25E49ACE009308C1 /* OtherObservingViewController.swift in Sources */,
 				47B9773325959A040088A197 /* RxGestureViewController.swift in Sources */,
+				47C0A81425E48D80009308C1 /* RxWebViewController.swift in Sources */,
 				47FECB3E259D65EA000FE39D /* ObservableAndObserverViewController.swift in Sources */,
 				478476AB2592EAF200507C48 /* SymbolViewController.swift in Sources */,
 				47415E2825DF485A00BF6F89 /* Rx+Ext.swift in Sources */,
@@ -347,9 +369,11 @@
 				47415E3C25DF49C400BF6F89 /* ResponseModel.swift in Sources */,
 				478476AA2592EAF200507C48 /* FlatMapLatestViewController.swift in Sources */,
 				47FECB41259D7858000FE39D /* ControlEventViewController.swift in Sources */,
+				47C0A81B25E49104009308C1 /* ObservingJSFunctionViewController.swift in Sources */,
 				47F09005259C71EE008D1657 /* ObservableViewController.swift in Sources */,
 				478476AE2592EEDC00507C48 /* SingleSymbolViewController.swift in Sources */,
 				4784768C2592EA3200507C48 /* SceneDelegate.swift in Sources */,
+				47C0A81825E48FA6009308C1 /* InvokeJSFunctionViewController.swift in Sources */,
 				47B44E1C2594883900F9EB51 /* ESRefresh+Ext.swift in Sources */,
 				47B44E202594885100F9EB51 /* RefreshViewController.swift in Sources */,
 			);
