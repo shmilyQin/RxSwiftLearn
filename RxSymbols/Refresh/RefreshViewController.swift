@@ -34,13 +34,11 @@ class RefreshViewController: BaseViewController {
         output.endDriver.drive(onNext: { [weak self](array) in
             self?.dataSource.accept([MySection.init(header: "", items: (self?.dataSource.value.first?.items ?? []) + array)])
         }).disposed(by: disposeBag)
-        output.endRefreshing.asDriver().drive(mytableView.header!.rx.endRefreshing).disposed(by: disposeBag)
-        output.endRefreshing.asDriver().drive(mytableView.footer!.rx.endRefreshing).disposed(by: disposeBag)
-//        output.results.subscribe(onNext: { [weak self](array) in
-//            self?.dataSource.accept([MySection.init(header: "", items:array)])
-//        }).disposed(by: disposeBag)
-//        output.endRefreshing.asDriver().drive(mytableView.header!.rx.endRefreshing).disposed(by: disposeBag)
-//        output.endRefreshing.asDriver().drive(mytableView.footer!.rx.endRefreshing).disposed(by: disposeBag)
+        
+        output.endHeaderRefreshing.asDriver().drive(mytableView.rx.endRefreshing).disposed(by: disposeBag)
+                
+        output.endFooterRefreshing.withLatestFrom(dataSource.asDriver(onErrorJustReturn: [])).map{$0.first?.items.count ?? 0 > 31}.drive(mytableView.rx.isNoMoreData).disposed(by: disposeBag)
+        
     }
     lazy var mytableView: UITableView = {
         let value = UITableView.init(frame: CGRect(x: 0, y: 64, width: 375, height: UIScreen.main.bounds.height - 64), style: .plain)

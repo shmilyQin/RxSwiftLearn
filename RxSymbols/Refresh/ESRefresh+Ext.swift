@@ -59,10 +59,22 @@ extension Reactive where Base: ESRefreshComponent{
         }
         return ControlEvent(events: source)
     }
+   
+}
+extension Reactive where Base:UITableView{
     var endRefreshing: Binder<Bool> {
-        return Binder(base) { refresh, isEnd in
+        return Binder(base) { tv, isEnd in
             if isEnd {
-                refresh.stopRefreshing()
+                tv.es.stopPullToRefresh()
+            }
+        }
+    }
+    var isNoMoreData:Binder<Bool>{
+        return Binder(base){tv,isNoMore in
+            if isNoMore{
+                tv.es.noticeNoMoreData()
+            }else {
+                tv.es.stopLoadingMore()
             }
         }
     }

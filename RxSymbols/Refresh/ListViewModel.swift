@@ -23,7 +23,8 @@ class ListViewModel: LYBaseViewModel{
 //        var endRefreshing:BehaviorRelay<Bool> = BehaviorRelay(value:false)
         var headerDriver: Driver<[String]>
         var endDriver: Driver<[String]>
-        var endRefreshing: Driver<Bool>
+        var endHeaderRefreshing: Driver<Bool>
+        var endFooterRefreshing: Driver<Void>
     }
     let networkService = NetworkService()
     var disposeBag = DisposeBag()
@@ -40,7 +41,8 @@ class ListViewModel: LYBaseViewModel{
 
         let headerDriver = input.headerRefreshIng.startWith(()).flatMapLatest{self.networkService.getRandomResult()}
         let endDriver =  input.footerRefreshIng.flatMapLatest{self.networkService.getRandomResult()}
-        let endRefreshing = Driver.merge(headerDriver,endDriver).map{_ in true}
-        return Output(headerDriver: headerDriver, endDriver: endDriver, endRefreshing: endRefreshing)
+        let endHeaderRefreshing = headerDriver.map{_ in true}
+        let endFooterRefreshing = Driver.merge(headerDriver,endDriver).map { _ in }
+        return Output(headerDriver: headerDriver, endDriver: endDriver,endHeaderRefreshing:endHeaderRefreshing,endFooterRefreshing:endFooterRefreshing)
     }
 }
