@@ -33,7 +33,7 @@ extension ObservableViewController{
 //        subscribeAction(ob: from)
 //        empty 创建一个空序列会执行completed的闭包
         let emptyOB = Observable<Int>.empty()
-//        subscribeAction(ob: emptyOB)
+        subscribeAction(ob: emptyOB)
 //        error 直接发出一个错误的序列 会执行error闭包
         let errorOB = Observable<Int>.error(NSError.init())
 //        range 该方法通过指定起始和结束数值,创建一个这个范围内的序列
@@ -63,7 +63,7 @@ extension ObservableViewController{
         let timerOne = Observable<Int>.timer(.seconds(4), scheduler: MainScheduler.init())
         subscribeAction(ob: timerOne)
 //        timer 第二种,每隔一段时间产生一个元素
-        let timerTwo = Observable<Int>.timer(.seconds(1), period: .seconds(2), scheduler: MainScheduler.init())
+        let timerTwo = Observable<Int>.timer(.seconds(1), period: .seconds(2), scheduler: MainScheduler.instance)
         
     }
 }

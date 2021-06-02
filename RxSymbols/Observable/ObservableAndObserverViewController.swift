@@ -30,6 +30,7 @@ extension ObservableAndObserverViewController{
         asyncOb.onNext(3)
         asyncOb.onCompleted()
     }
+
 }
 //MARK:-----PublishSubject-----
 extension ObservableAndObserverViewController{
@@ -108,3 +109,5 @@ extension ObservableAndObserverViewController{
         }).disposed(by: disposeBag)
     }
 }
+
+

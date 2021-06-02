@@ -43,7 +43,7 @@ DEPENDENCIES:
   - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
-  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Differentiator
     - ESPullToRefresh
@@ -77,6 +77,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 97f10305f98631747f71fdac971439ac43be7dd6
+PODFILE CHECKSUM: 23d2034946cf07d9ad0a607d1637b21e657293f9
 
 COCOAPODS: 1.10.1

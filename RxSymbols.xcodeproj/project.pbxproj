@@ -14,6 +14,9 @@
 		47415E4825DF550300BF6F89 /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E4725DF550300BF6F89 /* NewsDetailViewModel.swift */; };
 		47415E4B25DF556A00BF6F89 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E4A25DF556A00BF6F89 /* API.swift */; };
 		47415E5325DF5A7300BF6F89 /* NewsDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E5225DF5A7200BF6F89 /* NewsDetailModel.swift */; };
+		475450FA266737BF0086401E /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475450F9266737BF0086401E /* ExampleViewController.swift */; };
+		475450FC266779030086401E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475450FB266779030086401E /* WeatherViewController.swift */; };
+		475450FE26677D490086401E /* HomeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475450FD26677D490086401E /* HomeApi.swift */; };
 		4784768A2592EA3200507C48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478476892592EA3200507C48 /* AppDelegate.swift */; };
 		4784768C2592EA3200507C48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4784768B2592EA3200507C48 /* SceneDelegate.swift */; };
 		4784768E2592EA3200507C48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4784768D2592EA3200507C48 /* ViewController.swift */; };
@@ -50,6 +53,9 @@
 		47415E4725DF550300BF6F89 /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
 		47415E4A25DF556A00BF6F89 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		47415E5225DF5A7200BF6F89 /* NewsDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailModel.swift; sourceTree = "<group>"; };
+		475450F9266737BF0086401E /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		475450FB266779030086401E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		475450FD26677D490086401E /* HomeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApi.swift; sourceTree = "<group>"; };
 		478476862592EA3200507C48 /* RxSymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		478476892592EA3200507C48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4784768B2592EA3200507C48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 			children = (
 				47415E3B25DF49C400BF6F89 /* ResponseModel.swift */,
 				47415E4A25DF556A00BF6F89 /* API.swift */,
+				475450FD26677D490086401E /* HomeApi.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 			children = (
 				47415E4225DF549B00BF6F89 /* detail */,
 				47415E3F25DF50BD00BF6F89 /* NewsListViewController.swift */,
+				475450FB266779030086401E /* WeatherViewController.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -141,6 +149,14 @@
 				47415E5225DF5A7200BF6F89 /* NewsDetailModel.swift */,
 			);
 			path = detail;
+			sourceTree = "<group>";
+		};
+		475450F8266737AA0086401E /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				475450F9266737BF0086401E /* ExampleViewController.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 		4784767D2592EA3200507C48 = {
@@ -164,6 +180,7 @@
 		478476882592EA3200507C48 /* RxSymbols */ = {
 			isa = PBXGroup;
 			children = (
+				475450F8266737AA0086401E /* Example */,
 				47C0A81225E48D6A009308C1 /* Web */,
 				47415E3E25DF50AD00BF6F89 /* News */,
 				47415E3A25DF49AF00BF6F89 /* Network */,
@@ -352,7 +369,9 @@
 				47415E4B25DF556A00BF6F89 /* API.swift in Sources */,
 				47415E4825DF550300BF6F89 /* NewsDetailViewModel.swift in Sources */,
 				47B44E1D2594883900F9EB51 /* ListViewModel.swift in Sources */,
+				475450FC266779030086401E /* WeatherViewController.swift in Sources */,
 				47F09009259C7A94008D1657 /* TraitsViewController.swift in Sources */,
+				475450FE26677D490086401E /* HomeApi.swift in Sources */,
 				4784768E2592EA3200507C48 /* ViewController.swift in Sources */,
 				478476A92592EAF200507C48 /* BaseViewController.swift in Sources */,
 				47415E4425DF54B300BF6F89 /* NewsDetailViewController.swift in Sources */,
@@ -374,6 +393,7 @@
 				478476AE2592EEDC00507C48 /* SingleSymbolViewController.swift in Sources */,
 				4784768C2592EA3200507C48 /* SceneDelegate.swift in Sources */,
 				47C0A81825E48FA6009308C1 /* InvokeJSFunctionViewController.swift in Sources */,
+				475450FA266737BF0086401E /* ExampleViewController.swift in Sources */,
 				47B44E1C2594883900F9EB51 /* ESRefresh+Ext.swift in Sources */,
 				47B44E202594885100F9EB51 /* RefreshViewController.swift in Sources */,
 			);
@@ -452,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -507,7 +527,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -524,6 +544,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SH246RKATJ;
 				INFOPLIST_FILE = RxSymbols/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,6 +564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SH246RKATJ;
 				INFOPLIST_FILE = RxSymbols/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

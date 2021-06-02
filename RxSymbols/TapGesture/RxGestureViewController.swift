@@ -41,11 +41,12 @@ class RxGestureViewController: BaseViewController {
 //            }).disposed(by: disposeBag)
         
         //MARK:-----swipe滑动手势-----
-//        tapView.rx.swipeGesture(.down,.left,.right,.up)
-//            .when(.recognized)
-//            .subscribe(onNext: { (swipe) in
-//                print(swipe)
-//            }).disposed(by: disposeBag)
+        
+        tapView.rx.swipeGesture(.down,.left,.right,.up)
+            .when(.recognized)
+            .subscribe(onNext: { (swipe) in
+                print(swipe)
+            }).disposed(by: disposeBag)
         //MARK:-----pan拖动-----
 //        let panEvent = tapView.rx.panGesture().share(replay: 1, scope: .forever)
 //        panEvent.when(.began)

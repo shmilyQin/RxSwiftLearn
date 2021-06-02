@@ -13,19 +13,22 @@ struct ResponseModel {
     
     var status: Int = 0
     var msg = ""
+    let data: Data?
     var arrayData:[[String : Any]] = []
     var dictData: [String : Any] = [:]
-    let data: Data
     var jsonString = ""
     init(_ data: Data) {
         
         self.data = data
         
         do {
-            let allDic = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! Dictionary<String, Any>
-            let dict = allDic["result"] as! Dictionary<String, Any>
+            let allDic = (try? JSON.init(data: data).dictionaryObject) ?? [:]
+//            let allDic = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! Dictionary<String, Any>
+            let dict = allDic["result"] as? Dictionary<String, Any> ?? [:]
+            
             let jsonString = JSON(data).description
             self.jsonString = jsonString
+            
             let tempStatus = dict["error_code"] as? Int
             if tempStatus != nil {
                 status = tempStatus!
@@ -35,7 +38,7 @@ struct ResponseModel {
             if tempMessage != nil {
                 msg = tempMessage!
             }
-            
+
             let tempArray = dict["data"] as? [[String : AnyObject]]
             if tempArray != nil {
                 arrayData = tempArray!
@@ -53,11 +56,11 @@ struct ResponseModel {
     }
 }
 extension ResponseModel{
-    func mapMode<T:HandyJSON>(_ type:T.Type,designatedPath:String? = nil) -> T{
+    func mapModel<T:HandyJSON>(_ type:T.Type,designatedPath:String? = nil) -> T?{
         if let path = designatedPath{
-            return type.deserialize(from: self.jsonString, designatedPath: path)!
+            return type.deserialize(from: self.jsonString, designatedPath: path)
         }
-        return type.deserialize(from: self.jsonString)!
+      return type.deserialize(from: self.dictData)
     }
     func mapArrayModel<T:HandyJSON>(_ type:T.Type,designatedPath:String? = nil) -> [T]{
         if let path = designatedPath{
@@ -76,7 +79,10 @@ extension ResponseModel{
 extension PrimitiveSequence where Trait == SingleTrait,Element == ResponseModel{
     func mapMode<T:HandyJSON>(_ type:T.Type,designatedPath:String? = nil) ->Single<T>{
         return flatMap { response -> Single<T> in
-            return Single.just(response.mapMode(T.self, designatedPath: designatedPath))
+          if let value = response.mapModel(T.self, designatedPath: designatedPath){
+            return Single.just(value)
+          }
+          return Single.error(LYError.init(des: "解析数组错误"))
         }
     }
     func mapArrayModel<T:HandyJSON>(_ type: T.Type,designatedPath:String? = nil) -> Single<[T]> {
