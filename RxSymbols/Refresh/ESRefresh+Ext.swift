@@ -34,7 +34,7 @@ public extension ES where Base: UIScrollView {
 extension ESRefreshHeaderView{
     convenience init(frame: CGRect,isAnimator:Bool) {
         self.init(frame: frame)
-        // 毫无卵用,只是区分而已
+        // 只是区分而已
         if !isAnimator{return}
         self.animator = ESRefreshHeaderAnimator.init()
     }
@@ -42,7 +42,7 @@ extension ESRefreshHeaderView{
 extension ESRefreshFooterView{
     convenience init(frame: CGRect,isAnimator:Bool) {
         self.init(frame: frame)
-        // 毫无卵用,只是区分而已
+        //只是区分而已
         if !isAnimator{return}
         self.animator = ESRefreshFooterAnimator.init()
     }

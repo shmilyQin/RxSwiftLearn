@@ -11,7 +11,6 @@ class WeatherViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     lyApiProvider.rx.LYRequest(.getWeather).mapMode(WeatherModelB.self, designatedPath: "result.realtime")
       .subscribe { result in
         print(result)

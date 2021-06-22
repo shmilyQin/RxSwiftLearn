@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import RxRelay
 class FlatMapLatestViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,19 +15,21 @@ class FlatMapLatestViewController: BaseViewController {
         textF.placeholder = "请输入"
         view.addSubview(textF)
         textF.rx.text.orEmpty.flatMap {[weak self] (text) -> Observable<String> in
-            if text.count < 2{
-                return self!.getFirst(content: text)
-            }
-            return self!.getSecond(content: text)
+//            if text.count < 2{
+//                return self!.getFirst(content: text)
+//            }
+          guard let strongSelf = self else { return Observable.empty()}
+            return strongSelf.getSecond(content: text)
         }.subscribe(onNext: { (content) in
             print("flatMap\(content)")
         }).disposed(by: disposeBag)
         
         textF.rx.text.orEmpty.flatMapLatest { [weak self] (text) -> Observable<String> in
-            if text.count < 2{
-                return self!.getFirst(content: text)
-            }
-            return self!.getSecond(content: text)
+//            if text.count < 2{
+//                return self!.getFirst(content: text)
+//            }
+          guard let strongSelf = self else { return Observable.empty()}
+            return strongSelf.getSecond(content: text)
         }.subscribe(onNext: { (content) in
             print("flatMapLatest\(content)")
         }).disposed(by: disposeBag)

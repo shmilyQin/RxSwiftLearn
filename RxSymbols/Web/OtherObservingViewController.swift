@@ -22,7 +22,6 @@ class OtherObservingViewController: BaseViewController {
         webView.load(URLRequest(url: URL(string: "https://www.baidu.com")!))
     }
     func bindData()  {
-        webView.rx.title
         webView.rx.didStartProvisionalNavigation.subscribe(onNext: {[weak self] (info) in
             self?.view.makeToast("加载中...")
         }).disposed(by: disposeBag)

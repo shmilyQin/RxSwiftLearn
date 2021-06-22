@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.4.1)
+  - Alamofire (5.4.3)
   - Differentiator (4.0.1)
   - ESPullToRefresh (2.9.3)
   - HandyJSON (5.0.2)
@@ -9,7 +9,7 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
-  - ProgressHUD (13.4)
+  - ProgressHUD (13.6)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -22,11 +22,11 @@ PODS:
     - RxSwift (~> 5.1)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
-  - RxSwift (5.1.1)
+  - RxSwift (5.1.2)
   - RxWebKit (1.0.2):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
-  - SwiftyJSON (5.0.0)
+  - SwiftyJSON (5.0.1)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
@@ -61,22 +61,22 @@ SPEC REPOS:
     - Toast-Swift
 
 SPEC CHECKSUMS:
-  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   Kingfisher: adde87a4f74f6a3845395769354efff593581740
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  ProgressHUD: 137a7fc677487c5581668f4490563124fb35c232
+  ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
   RxWebKit: a3085e7cd8b57182b452692686675702474014dd
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 23d2034946cf07d9ad0a607d1637b21e657293f9
+PODFILE CHECKSUM: fb59931ceb7d5f08a50bb8cb8a8f278826c12c72
 
 COCOAPODS: 1.10.1
