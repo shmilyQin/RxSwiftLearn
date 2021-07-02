@@ -18,7 +18,7 @@ class SymbolViewController: BaseViewController {
     title = "多序列"
     //        zipSymbol()
     //        withLatestFromSymbol()
-    //        withLatestFromSymbol2()
+//            withLatestFromSymbol2()
     //        mergeSymbol()
     //        combineLatestSymbol()
     //        concatSymbol()

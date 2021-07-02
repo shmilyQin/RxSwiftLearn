@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		473873A9268D5AAC004FBE6B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473873A8268D5AAC004FBE6B /* LoginView.swift */; };
 		47415E2825DF485A00BF6F89 /* Rx+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E2725DF485A00BF6F89 /* Rx+Ext.swift */; };
 		47415E3C25DF49C400BF6F89 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E3B25DF49C400BF6F89 /* ResponseModel.swift */; };
 		47415E4025DF50BD00BF6F89 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E3F25DF50BD00BF6F89 /* NewsListViewController.swift */; };
@@ -17,6 +18,7 @@
 		475450FA266737BF0086401E /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475450F9266737BF0086401E /* ExampleViewController.swift */; };
 		475450FC266779030086401E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475450FB266779030086401E /* WeatherViewController.swift */; };
 		475450FE26677D490086401E /* HomeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475450FD26677D490086401E /* HomeApi.swift */; };
+		476F344E2689758800C82DDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476F344D2689758800C82DDB /* LoginViewController.swift */; };
 		4784768A2592EA3200507C48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478476892592EA3200507C48 /* AppDelegate.swift */; };
 		4784768C2592EA3200507C48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4784768B2592EA3200507C48 /* SceneDelegate.swift */; };
 		4784768E2592EA3200507C48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4784768D2592EA3200507C48 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 		47C0A81825E48FA6009308C1 /* InvokeJSFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0A81725E48FA5009308C1 /* InvokeJSFunctionViewController.swift */; };
 		47C0A81B25E49104009308C1 /* ObservingJSFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0A81A25E49104009308C1 /* ObservingJSFunctionViewController.swift */; };
 		47C0A81E25E49ACE009308C1 /* OtherObservingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0A81D25E49ACE009308C1 /* OtherObservingViewController.swift */; };
+		47DEC50B268419E8003C26C9 /* CombineSymbolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DEC50A268419E8003C26C9 /* CombineSymbolViewController.swift */; };
+		47EE3C46268C676700377ACE /* loginFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE3C45268C676700377ACE /* loginFile.swift */; };
 		47F09005259C71EE008D1657 /* ObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09004259C71EE008D1657 /* ObservableViewController.swift */; };
 		47F09009259C7A94008D1657 /* TraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09008259C7A94008D1657 /* TraitsViewController.swift */; };
 		47FECB3E259D65EA000FE39D /* ObservableAndObserverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FECB3D259D65EA000FE39D /* ObservableAndObserverViewController.swift */; };
@@ -46,6 +50,7 @@
 /* Begin PBXFileReference section */
 		0BFBFB18D4DDE2E68E7C3C7E /* Pods_RxSymbols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSymbols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35285CBBE5CCBEB3FCC8660A /* Pods-RxSymbols.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSymbols.debug.xcconfig"; path = "Target Support Files/Pods-RxSymbols/Pods-RxSymbols.debug.xcconfig"; sourceTree = "<group>"; };
+		473873A8268D5AAC004FBE6B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		47415E2725DF485A00BF6F89 /* Rx+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Ext.swift"; sourceTree = "<group>"; };
 		47415E3B25DF49C400BF6F89 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		47415E3F25DF50BD00BF6F89 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		475450F9266737BF0086401E /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		475450FB266779030086401E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		475450FD26677D490086401E /* HomeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApi.swift; sourceTree = "<group>"; };
+		476F344D2689758800C82DDB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		478476862592EA3200507C48 /* RxSymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		478476892592EA3200507C48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4784768B2592EA3200507C48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +83,8 @@
 		47C0A81725E48FA5009308C1 /* InvokeJSFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvokeJSFunctionViewController.swift; sourceTree = "<group>"; };
 		47C0A81A25E49104009308C1 /* ObservingJSFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservingJSFunctionViewController.swift; sourceTree = "<group>"; };
 		47C0A81D25E49ACE009308C1 /* OtherObservingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherObservingViewController.swift; sourceTree = "<group>"; };
+		47DEC50A268419E8003C26C9 /* CombineSymbolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineSymbolViewController.swift; sourceTree = "<group>"; };
+		47EE3C45268C676700377ACE /* loginFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginFile.swift; sourceTree = "<group>"; };
 		47F09004259C71EE008D1657 /* ObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewController.swift; sourceTree = "<group>"; };
 		47F09008259C7A94008D1657 /* TraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsViewController.swift; sourceTree = "<group>"; };
 		47FECB3D259D65EA000FE39D /* ObservableAndObserverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableAndObserverViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +167,16 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		476F344C2689757400C82DDB /* login */ = {
+			isa = PBXGroup;
+			children = (
+				476F344D2689758800C82DDB /* LoginViewController.swift */,
+				47EE3C45268C676700377ACE /* loginFile.swift */,
+				473873A8268D5AAC004FBE6B /* LoginView.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 		4784767D2592EA3200507C48 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +198,7 @@
 		478476882592EA3200507C48 /* RxSymbols */ = {
 			isa = PBXGroup;
 			children = (
+				476F344C2689757400C82DDB /* login */,
 				475450F8266737AA0086401E /* Example */,
 				47C0A81225E48D6A009308C1 /* Web */,
 				47415E3E25DF50AD00BF6F89 /* News */,
@@ -207,6 +226,7 @@
 				478476A72592EAF200507C48 /* FlatMapLatestViewController.swift */,
 				478476A82592EAF200507C48 /* SymbolViewController.swift */,
 				478476AD2592EEDC00507C48 /* SingleSymbolViewController.swift */,
+				47DEC50A268419E8003C26C9 /* CombineSymbolViewController.swift */,
 			);
 			path = Symbol;
 			sourceTree = "<group>";
@@ -376,8 +396,10 @@
 				478476A92592EAF200507C48 /* BaseViewController.swift in Sources */,
 				47415E4425DF54B300BF6F89 /* NewsDetailViewController.swift in Sources */,
 				47415E4025DF50BD00BF6F89 /* NewsListViewController.swift in Sources */,
+				473873A9268D5AAC004FBE6B /* LoginView.swift in Sources */,
 				47B44E1B2594883900F9EB51 /* NetworkService.swift in Sources */,
 				47415E5325DF5A7300BF6F89 /* NewsDetailModel.swift in Sources */,
+				476F344E2689758800C82DDB /* LoginViewController.swift in Sources */,
 				47C0A81E25E49ACE009308C1 /* OtherObservingViewController.swift in Sources */,
 				47B9773325959A040088A197 /* RxGestureViewController.swift in Sources */,
 				47C0A81425E48D80009308C1 /* RxWebViewController.swift in Sources */,
@@ -389,8 +411,10 @@
 				478476AA2592EAF200507C48 /* FlatMapLatestViewController.swift in Sources */,
 				47FECB41259D7858000FE39D /* ControlEventViewController.swift in Sources */,
 				47C0A81B25E49104009308C1 /* ObservingJSFunctionViewController.swift in Sources */,
+				47EE3C46268C676700377ACE /* loginFile.swift in Sources */,
 				47F09005259C71EE008D1657 /* ObservableViewController.swift in Sources */,
 				478476AE2592EEDC00507C48 /* SingleSymbolViewController.swift in Sources */,
+				47DEC50B268419E8003C26C9 /* CombineSymbolViewController.swift in Sources */,
 				4784768C2592EA3200507C48 /* SceneDelegate.swift in Sources */,
 				47C0A81825E48FA6009308C1 /* InvokeJSFunctionViewController.swift in Sources */,
 				475450FA266737BF0086401E /* ExampleViewController.swift in Sources */,

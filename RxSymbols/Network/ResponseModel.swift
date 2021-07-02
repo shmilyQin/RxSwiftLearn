@@ -39,12 +39,12 @@ struct ResponseModel {
         msg = tempMessage!
       }
       
-      let tempArray = dict["data"] as? [[String : AnyObject]]
+      let tempArray = dict["data"] as? [[String : Any]]
       if tempArray != nil {
         arrayData = tempArray!
       }
       
-      let tempDict = dict["data"] as? [String : AnyObject]
+      let tempDict = dict["data"] as? [String : Any]
       if tempDict != nil {
         dictData = tempDict!
       }
@@ -56,36 +56,23 @@ struct ResponseModel {
   }
 }
 extension ResponseModel{
-  func mapModel<T:HandyJSON>(_ type:T.Type,designatedPath:String? = nil) -> T?{
-    if let path = designatedPath{
-      return T.deserialize(from: self.jsonString, designatedPath: path)
-    }
-    return T.deserialize(from: self.dictData)
+  func mapModel<T:HandyJSON>(_ type:T.Type,designatedPath:String?) -> T?{
+    return T.deserialize(from: self.jsonString, designatedPath: designatedPath)
   }
-  func mapArrayModel<T:HandyJSON>(_ type:T.Type,designatedPath:String? = nil) -> [T]{
-    if let path = designatedPath{
-      if let array = [T].deserialize(from: jsonString, designatedPath: path) as? [T]{
-        return array
-      }
-      return []
-    }else{
-      if let array = [T].deserialize(from: self.arrayData) as? [T]{
-        return array
-      }
-      return []
-    }
+  func mapArrayModel<T:HandyJSON>(_ type:T.Type,designatedPath:String? ) -> [T]{
+    return [T].deserialize(from: jsonString, designatedPath: designatedPath) as? [T] ?? []
   }
 }
 extension PrimitiveSequence where Trait == SingleTrait,Element == ResponseModel{
-  func mapMode<T:HandyJSON>(_ type:T.Type,designatedPath:String? = nil) ->Single<T>{
+  func mapMode<T:HandyJSON>(_ type:T.Type,designatedPath:String? = "result.data") ->Single<T>{
     return flatMap { response -> Single<T> in
       if let value = response.mapModel(T.self, designatedPath: designatedPath){
         return Single.just(value)
       }
-      return Single.error(LYError.init(des: "解析数组错误"))
+      return Single.error(LYError.init(des: "解析数据错误"))
     }
   }
-  func mapArrayModel<T:HandyJSON>(_ type: T.Type,designatedPath:String? = nil) -> Single<[T]> {
+  func mapArrayModel<T:HandyJSON>(_ type: T.Type,designatedPath:String? = "result.data") -> Single<[T]> {
     return flatMap { response -> Single<[T]> in
       return Single.just(response.mapArrayModel(T.self, designatedPath: designatedPath))
     }
