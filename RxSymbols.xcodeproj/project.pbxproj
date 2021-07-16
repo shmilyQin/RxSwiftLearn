@@ -15,6 +15,17 @@
 		47415E4825DF550300BF6F89 /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E4725DF550300BF6F89 /* NewsDetailViewModel.swift */; };
 		47415E4B25DF556A00BF6F89 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E4A25DF556A00BF6F89 /* API.swift */; };
 		47415E5325DF5A7300BF6F89 /* NewsDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E5225DF5A7200BF6F89 /* NewsDetailModel.swift */; };
+		4749013E26A0076E00F63E84 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4749013D26A0076D00F63E84 /* VideoToolbox.framework */; };
+		4749014026A0077600F63E84 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4749013F26A0077600F63E84 /* QuartzCore.framework */; };
+		4749014226A0078000F63E84 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4749014126A0078000F63E84 /* OpenGLES.framework */; };
+		4749014426A0078600F63E84 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4749014326A0078600F63E84 /* MobileCoreServices.framework */; };
+		4749014626A0079200F63E84 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4749014526A0079200F63E84 /* MediaPlayer.framework */; };
+		4749014826A0079900F63E84 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4749014726A0079900F63E84 /* CoreVideo.framework */; };
+		4749014A26A007A300F63E84 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4749014926A007A300F63E84 /* CoreMedia.framework */; };
+		4749014C26A007AA00F63E84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4749014B26A007AA00F63E84 /* CoreGraphics.framework */; };
+		4749014E26A007B100F63E84 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4749014D26A007B100F63E84 /* AudioToolbox.framework */; };
+		4749015026A007B900F63E84 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4749014F26A007B900F63E84 /* libz.tbd */; };
+		4749015226A007C500F63E84 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4749015126A007C500F63E84 /* libbz2.tbd */; };
 		475450FA266737BF0086401E /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475450F9266737BF0086401E /* ExampleViewController.swift */; };
 		475450FC266779030086401E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475450FB266779030086401E /* WeatherViewController.swift */; };
 		475450FE26677D490086401E /* HomeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475450FD26677D490086401E /* HomeApi.swift */; };
@@ -58,6 +69,17 @@
 		47415E4725DF550300BF6F89 /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
 		47415E4A25DF556A00BF6F89 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		47415E5225DF5A7200BF6F89 /* NewsDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailModel.swift; sourceTree = "<group>"; };
+		4749013D26A0076D00F63E84 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		4749013F26A0077600F63E84 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4749014126A0078000F63E84 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		4749014326A0078600F63E84 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4749014526A0079200F63E84 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		4749014726A0079900F63E84 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		4749014926A007A300F63E84 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		4749014B26A007AA00F63E84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4749014D26A007B100F63E84 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4749014F26A007B900F63E84 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4749015126A007C500F63E84 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		475450F9266737BF0086401E /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		475450FB266779030086401E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		475450FD26677D490086401E /* HomeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApi.swift; sourceTree = "<group>"; };
@@ -97,6 +119,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4749015226A007C500F63E84 /* libbz2.tbd in Frameworks */,
+				4749015026A007B900F63E84 /* libz.tbd in Frameworks */,
+				4749014E26A007B100F63E84 /* AudioToolbox.framework in Frameworks */,
+				4749014C26A007AA00F63E84 /* CoreGraphics.framework in Frameworks */,
+				4749014A26A007A300F63E84 /* CoreMedia.framework in Frameworks */,
+				4749014826A0079900F63E84 /* CoreVideo.framework in Frameworks */,
+				4749014626A0079200F63E84 /* MediaPlayer.framework in Frameworks */,
+				4749014426A0078600F63E84 /* MobileCoreServices.framework in Frameworks */,
+				4749014226A0078000F63E84 /* OpenGLES.framework in Frameworks */,
+				4749014026A0077600F63E84 /* QuartzCore.framework in Frameworks */,
+				4749013E26A0076E00F63E84 /* VideoToolbox.framework in Frameworks */,
 				C23A451DB3C9932CB42D466C /* Pods_RxSymbols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +149,17 @@
 		30CE0C9E9468E5D8C969BB85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4749015126A007C500F63E84 /* libbz2.tbd */,
+				4749014F26A007B900F63E84 /* libz.tbd */,
+				4749014D26A007B100F63E84 /* AudioToolbox.framework */,
+				4749014B26A007AA00F63E84 /* CoreGraphics.framework */,
+				4749014926A007A300F63E84 /* CoreMedia.framework */,
+				4749014726A0079900F63E84 /* CoreVideo.framework */,
+				4749014526A0079200F63E84 /* MediaPlayer.framework */,
+				4749014326A0078600F63E84 /* MobileCoreServices.framework */,
+				4749014126A0078000F63E84 /* OpenGLES.framework */,
+				4749013F26A0077600F63E84 /* QuartzCore.framework */,
+				4749013D26A0076D00F63E84 /* VideoToolbox.framework */,
 				0BFBFB18D4DDE2E68E7C3C7E /* Pods_RxSymbols.framework */,
 			);
 			name = Frameworks;

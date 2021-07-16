@@ -9,27 +9,49 @@ import UIKit
 import RxSwift
 import RxCocoa
 /**
- 校验用户名是否大于11位,如果不满足就有提示,且为红色字体,通过则为绿色字体
- 密码是否大于6位,如果不满足就有提示,且为红色字体,通过则为绿色字体
+ 校验手机号是否大于11位,如果不满足就有文字提示,且为红色字体,通过则为绿色字体
+ 密码是否大于6位,如果不满足就有文字提示,且为红色字体,通过则为绿色字体
  如果上述条件都满足,则登录按钮的Enable为true
  点击登录按钮后,开启indicatorView的动画,登录成功后取消indicator的动画
  */
 class LoginViewController: BaseViewController {
+  var viewModel: LoginViewModel!
   override func viewDidLoad() {
     super.viewDidLoad()
-    //    view.addSubview(userNameField)
-    //    view.addSubview(tipLabel)
-    //    view.addSubview(pswTextField)
-    //    view.addSubview(pswTipLabel)
-    //    view.addSubview(loginBtn)
-    //    view.addSubview(activityIndicator)
-    view.addSubview(loginView)
+        view.addSubview(userNameField)
+        view.addSubview(tipLabel)
+        view.addSubview(pswTextField)
+        view.addSubview(pswTipLabel)
+        view.addSubview(loginBtn)
+        view.addSubview(activityIndicator)
+//    view.addSubview(loginView)
     bindData()
+    bindViewModel()
   }
- 
+  func bindViewModel(){
+    viewModel = LoginViewModel()
+    let input = LoginViewModel.Input(phoneInput: userNameField.rx.text.orEmpty.asObservable(), pswInput: pswTextField.rx.text.orEmpty.asObservable(), tapInut: loginBtn.rx.whsTap().mapToVoid())
+    
+    let out = viewModel.transform(input: input)
+    
+    out.nameValidation.bind(to: tipLabel.rx.tipResult).disposed(by: disposeBag)
+    out.pswValidation.bind(to: pswTipLabel.rx.tipResult).disposed(by: disposeBag)
+    out.loginEnable.bind(to: loginBtn.rx.isEnabled).disposed(by: disposeBag)
+    
+    out.loginResult.subscribe(onNext: { content in
+      print(content)
+    }).disposed(by: disposeBag)
+  }
   func bindData(){
-    let userSignal = userNameField.rx.text.orEmpty.asObservable()
-    let pswSignal =  pswTextField.rx.text.orEmpty.asObservable()
+    
+    let userSignal = userNameField.rx.text.orEmpty.asObservable().map { content -> String in
+      print("执行手机号")
+      return content
+    }
+    let pswSignal =  pswTextField.rx.text.orEmpty.asObservable().map { content -> String in
+      print("执行密码")
+      return content
+    }
     
     let userValidate = userSignal.map { content in
       return self.getValidationResult(content: content)
@@ -37,21 +59,21 @@ class LoginViewController: BaseViewController {
     let pswValidate = pswSignal.map { psw in
       return self.getPswValidationResult(psw: psw)
     }
-    
     userValidate.bind(to: tipLabel.rx.tipResult).disposed(by: disposeBag)
     pswValidate.bind(to: pswTipLabel.rx.tipResult).disposed(by: disposeBag)
-    
+
     let combineSignal = Observable.combineLatest(userValidate, pswValidate)
     let combineNameAndPsw = Observable.combineLatest(userSignal, pswSignal)
-    
+
     combineSignal.map{$0.0.isSuccess && $0.1.isSuccess}.bind(to: loginBtn.rx.isEnabled).disposed(by: disposeBag)
-    
-    let loginResult = loginBtn.rx.whsTap().withLatestFrom(combineNameAndPsw).flatMapLatest {[weak self](phone,psw) -> Observable<String> in
+    let loginResult = loginBtn.rx.whsTap().withLatestFrom(combineNameAndPsw)
+      .flatMapLatest {[weak self](phone,psw) -> Observable<String> in
       guard let strongSelf = self else{return Observable.empty()}
       return strongSelf.loginRequest(phone: phone, code: psw)
     }
-    let isStart = Observable.merge(loginBtn.rx.whsTap().map{_ in true},loginResult.map{_ in false})
+    let isStart = Observable.merge(loginBtn.rx.tap.map{_ in true},loginResult.map{_ in false})
     isStart.bind(to: activityIndicator.rx.isAnimating).disposed(by: disposeBag)
+    
     loginResult.subscribe(onNext: {[weak self] result in
       self?.showLoginAlert(content: result)
     }).disposed(by: disposeBag)

@@ -64,8 +64,18 @@ class LoginView: UIView {
     value.backgroundColor = .gray
     return value
   }()
+  @objc dynamic func clickAciton(){
+//    闭包
+  }
 }
 extension Reactive where Base: LoginView{
+//  var actionEvent: ControlEvent<Void>{
+//    //调用方法前
+//    let s = base.rx.sentMessage(<#T##selector: Selector##Selector#>)
+//    //调用方法后
+//    let source = base.rx.methodInvoked(#selector(Base.clickAciton))
+//    return ControlEvent(events: source)
+//  }
   var loginAction: ControlEvent<Void>{
     let source = base.loginBtn.rx.whsTap().asObservable()
     return ControlEvent(events: source)
@@ -78,6 +88,7 @@ extension Reactive where Base: LoginView{
     let source = base.pswTextField.rx.text.orEmpty.asObservable()
     return ControlEvent(events: source)
   }
+  
   var isLoginEnable: Binder<Bool>{
     return Binder(base) {view,flag in
       view.loginBtn.isEnabled = flag

@@ -10,6 +10,7 @@ import RxSwift
 import RxRelay
 class CombineSymbolViewController: BaseViewController {
   var nameSignalB: PublishRelay<String> = PublishRelay()
+//  var nameSignalC: BehaviorRelay<String> = BehaviorRelay(value:"")
   var contentSignalB: PublishRelay<String> = PublishRelay()
   var nameCount = 0
   var contentCount = 0

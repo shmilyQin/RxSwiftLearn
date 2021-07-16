@@ -60,14 +60,3 @@ class LoginViewModel: LYBaseViewModel {
     return Single.just("\(phone)---\(code)").delay(.seconds(2), scheduler: MainScheduler.instance)
   }
 }
-//func bindViewModel(){
-//  viewModel = LoginViewModel()
-//  let input = LoginViewModel.Input(phoneInput: userNameField.rx.text.orEmpty.asObservable(), pswInput: pswTextField.rx.text.orEmpty.asObservable(), tapInut: loginBtn.rx.whsTap().mapToVoid())
-//  let out = viewModel.transform(input: input)
-//  out.nameValidation.bind(to: tipLabel.rx.tipResult).disposed(by: disposeBag)
-//  out.pswValidation.bind(to: pswTipLabel.rx.tipResult).disposed(by: disposeBag)
-//  out.loginEnable.bind(to: loginBtn.rx.isEnabled).disposed(by: disposeBag)
-//  out.loginResult.subscribe(onNext: { content in
-//    print(content)
-//  }).disposed(by: disposeBag)
-//}
