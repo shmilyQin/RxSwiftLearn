@@ -17,8 +17,12 @@ class LoginView: UIView {
     addSubview(pswTipLabel)
     addSubview(loginBtn)
     addSubview(activityIndicator)
+    
   }
-  
+  @discardableResult
+  @objc dynamic func test()->String{
+    return "我好帅"
+  }
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
@@ -48,13 +52,14 @@ class LoginView: UIView {
     value.font = UIFont.systemFont(ofSize: 12)
     return value
   }()
-  fileprivate lazy var loginBtn: UIButton = {
+  lazy var loginBtn: UIButton = {
     let value = UIButton(frame: CGRect(x: UIScreen.main.bounds.width / 2.0  - 50, y: 300, width: 100, height: 40))
     value.setTitle("登录", for: .normal)
     value.setTitle("登录", for: .disabled)
     value.setTitleColor(.white, for: [.normal , .disabled])
     value.setBackgroundImage(UIImage.from(color: .green), for: .normal)
     value.setBackgroundImage(UIImage.from(color: .lightGray), for: .disabled)
+    value.addTarget(self, action: #selector(clickAciton(_:)), for: .touchUpInside)
     return value
   }()
   fileprivate lazy var activityIndicator: UIActivityIndicatorView = {
@@ -64,8 +69,9 @@ class LoginView: UIView {
     value.backgroundColor = .gray
     return value
   }()
-  @objc dynamic func clickAciton(){
+  @objc dynamic func clickAciton(_ sender: UIButton){
 //    闭包
+    test()
   }
 }
 extension Reactive where Base: LoginView{

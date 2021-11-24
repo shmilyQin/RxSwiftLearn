@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4705917A26DF2C31008AB8E3 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705917926DF2C31008AB8E3 /* MainTableViewCell.swift */; };
 		473873A9268D5AAC004FBE6B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473873A8268D5AAC004FBE6B /* LoginView.swift */; };
 		47415E2825DF485A00BF6F89 /* Rx+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E2725DF485A00BF6F89 /* Rx+Ext.swift */; };
 		47415E3C25DF49C400BF6F89 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47415E3B25DF49C400BF6F89 /* ResponseModel.swift */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		0BFBFB18D4DDE2E68E7C3C7E /* Pods_RxSymbols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSymbols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35285CBBE5CCBEB3FCC8660A /* Pods-RxSymbols.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSymbols.debug.xcconfig"; path = "Target Support Files/Pods-RxSymbols/Pods-RxSymbols.debug.xcconfig"; sourceTree = "<group>"; };
+		4705917926DF2C31008AB8E3 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		473873A8268D5AAC004FBE6B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		47415E2725DF485A00BF6F89 /* Rx+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Ext.swift"; sourceTree = "<group>"; };
 		47415E3B25DF49C400BF6F89 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				478476892592EA3200507C48 /* AppDelegate.swift */,
 				4784768B2592EA3200507C48 /* SceneDelegate.swift */,
 				4784768D2592EA3200507C48 /* ViewController.swift */,
+				4705917926DF2C31008AB8E3 /* MainTableViewCell.swift */,
 				4784768F2592EA3200507C48 /* Main.storyboard */,
 				478476922592EA3500507C48 /* Assets.xcassets */,
 				478476942592EA3500507C48 /* LaunchScreen.storyboard */,
@@ -454,6 +457,7 @@
 				47415E3C25DF49C400BF6F89 /* ResponseModel.swift in Sources */,
 				478476AA2592EAF200507C48 /* FlatMapLatestViewController.swift in Sources */,
 				47FECB41259D7858000FE39D /* ControlEventViewController.swift in Sources */,
+				4705917A26DF2C31008AB8E3 /* MainTableViewCell.swift in Sources */,
 				47C0A81B25E49104009308C1 /* ObservingJSFunctionViewController.swift in Sources */,
 				47EE3C46268C676700377ACE /* loginFile.swift in Sources */,
 				47F09005259C71EE008D1657 /* ObservableViewController.swift in Sources */,

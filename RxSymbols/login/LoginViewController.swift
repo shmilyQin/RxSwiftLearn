@@ -18,15 +18,20 @@ class LoginViewController: BaseViewController {
   var viewModel: LoginViewModel!
   override func viewDidLoad() {
     super.viewDidLoad()
-        view.addSubview(userNameField)
-        view.addSubview(tipLabel)
-        view.addSubview(pswTextField)
-        view.addSubview(pswTipLabel)
-        view.addSubview(loginBtn)
-        view.addSubview(activityIndicator)
-//    view.addSubview(loginView)
-    bindData()
-    bindViewModel()
+    
+//    view.addSubview(userNameField)
+//    view.addSubview(tipLabel)
+//    view.addSubview(pswTextField)
+//    view.addSubview(pswTipLabel)
+//    view.addSubview(loginBtn)
+//    view.addSubview(activityIndicator)
+//    //    view.addSubview(loginView)
+//    bindData()
+//    bindViewModel()
+    view.addSubview(loginView)
+//    loginView.rx.methodInvoked(#selector(LoginView.test)).subscribe(onNext: { info in
+//      print(info)
+//    }).disposed(by: disposeBag)
   }
   func bindViewModel(){
     viewModel = LoginViewModel()
@@ -61,16 +66,16 @@ class LoginViewController: BaseViewController {
     }
     userValidate.bind(to: tipLabel.rx.tipResult).disposed(by: disposeBag)
     pswValidate.bind(to: pswTipLabel.rx.tipResult).disposed(by: disposeBag)
-
+    
     let combineSignal = Observable.combineLatest(userValidate, pswValidate)
     let combineNameAndPsw = Observable.combineLatest(userSignal, pswSignal)
-
+    
     combineSignal.map{$0.0.isSuccess && $0.1.isSuccess}.bind(to: loginBtn.rx.isEnabled).disposed(by: disposeBag)
     let loginResult = loginBtn.rx.whsTap().withLatestFrom(combineNameAndPsw)
       .flatMapLatest {[weak self](phone,psw) -> Observable<String> in
-      guard let strongSelf = self else{return Observable.empty()}
-      return strongSelf.loginRequest(phone: phone, code: psw)
-    }
+        guard let strongSelf = self else{return Observable.empty()}
+        return strongSelf.loginRequest(phone: phone, code: psw)
+      }
     let isStart = Observable.merge(loginBtn.rx.tap.map{_ in true},loginResult.map{_ in false})
     isStart.bind(to: activityIndicator.rx.isAnimating).disposed(by: disposeBag)
     

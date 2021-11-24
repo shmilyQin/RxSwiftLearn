@@ -8,28 +8,15 @@
 import UIKit
 import RxRelay
 import RxSwift
-
+import RxCocoa
 class FlatMapLatestViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "组合"
     flatMapAndFlatMapLatest()
 //    flatMapAndConcat()
-    guolu()
-    
   }
-  func guolu(){
-    let signalA = Observable.from(["1,2,3,4"])
-    // 1, 4
-//    signalA.throttle(<#T##dueTime: RxTimeInterval##RxTimeInterval#>, scheduler: <#T##SchedulerType#>)
-//    //1
-//    signalA.throttle(<#T##dueTime: RxTimeInterval##RxTimeInterval#>, latest: <#T##Bool#>, scheduler: <#T##SchedulerType#>)
-//    // 4
-//    signalA.debounce(<#T##dueTime: RxTimeInterval##RxTimeInterval#>, scheduler: <#T##SchedulerType#>)
-//    signalA.subscribe(onNext: { content in
-//      
-//    }).disposed(by: disposeBag)
-  }
+
   func flatMapAndFlatMapLatest(){
     let textF = UITextField(frame: CGRect(x: 100, y: 100, width: 100, height: 40))
     textF.placeholder = "请输入"

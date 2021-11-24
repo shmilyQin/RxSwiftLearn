@@ -24,7 +24,7 @@ class SingleSymbolViewController: BaseViewController {
     //        skipSymbol()
     //        skipUntilSymbol()
     //        skipWhile()
-    //        shareSymbol()
+//            shareSymbol()
     //        scanSymbol()
     //        retrySymbol()
     //        retryWhenSymbol()
@@ -33,7 +33,7 @@ class SingleSymbolViewController: BaseViewController {
     //        groupBySymbol()
     //        elementAtSymbol()
     //        distinctUntilChangedSymbol()
-    //        noShakeSymbol()
+//            noShakeSymbol()
     //        bufferSymbol()
     //        singleSymbol()
   }
@@ -144,7 +144,7 @@ extension SingleSymbolViewController{
 //MARK:-----Share-----
 extension SingleSymbolViewController{
   func shareSymbol(){
-    let observable = netWorking().asObservable()
+    let observable = netWorking().delay(.seconds(2), scheduler: MainScheduler.instance).asObservable().share(replay: 1)
     observable.subscribe(onNext: { content in
       print(content)
     }).disposed(by: disposeBag)

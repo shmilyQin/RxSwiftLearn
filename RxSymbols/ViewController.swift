@@ -16,13 +16,13 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     initInterface()
     initDataSource()
-
   }
+
   //MARK:-----各种方法-----
   func bindData(){
     let items = RxTableViewSectionedReloadDataSource<SectionModel<String,(title:String,VCName:String)>>.init { (data, tableView, indexPath, element) -> UITableViewCell in
-      let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-      cell.textLabel?.text = element.title
+      let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainTableViewCell
+      cell.titleLabel.text = element.title
       return cell
     }
     dataSource.asDriver().drive(myTableView.rx.items(dataSource: items)).disposed(by: dispose)
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
   //MARK:-----懒加载-----
   lazy var myTableView: UITableView = {
     let value = UITableView(frame: self.view.bounds, style: .plain)
-    value.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    value.register(MainTableViewCell.self, forCellReuseIdentifier: "cell")
     return value
   }()
 }
