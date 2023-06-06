@@ -33,15 +33,15 @@ extension Reactive where Base:MoyaProviderType{
                         print("-----------------------------------------------")
                     let model = ResponseModel.init(response.data)
                     if model.status == 401{
-                        single(.error(ResponseError(model.msg)))
+                        single(.failure(ResponseError(model.msg)))
                     }else if model.status == 0{
                         single(.success(model))
                     }else{
-                        single(.error(ResponseError(model.msg)))
+                        single(.failure(ResponseError(model.msg)))
                     }
                 case let .failure(error):
                     print("错误状态码:\((error.response?.statusCode ?? 0))")
-                    single(.error(ResponseError("无法链接")))
+                    single(.failure(ResponseError("无法链接")))
                 }
             })
             return Disposables.create {

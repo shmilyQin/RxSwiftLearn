@@ -1,31 +1,31 @@
 PODS:
-  - Alamofire (5.4.3)
-  - Differentiator (4.0.1)
+  - Alamofire (5.6.4)
+  - Differentiator (5.0.0)
   - ESPullToRefresh (2.9.3)
   - HandyJSON (5.0.2)
   - Kingfisher (6.0.1)
-  - Moya/Core (14.0.0):
+  - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
-  - Moya/RxSwift (14.0.0):
+  - Moya/RxSwift (15.0.0):
     - Moya/Core
-    - RxSwift (~> 5.0)
+    - RxSwift (~> 6.0)
   - ProgressHUD (13.6)
-  - RxCocoa (5.1.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxDataSources (4.0.1):
-    - Differentiator (~> 4.0)
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxGesture (3.0.2):
-    - RxCocoa (~> 5.1)
-    - RxSwift (~> 5.1)
-  - RxRelay (5.1.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.1.2)
-  - RxWebKit (1.0.2):
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxGesture (4.0.4):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - RxWebKit (2.0.1):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - SwiftyJSON (5.0.1)
   - Toast-Swift (5.0.1)
 
@@ -33,12 +33,12 @@ DEPENDENCIES:
   - ESPullToRefresh (~> 2.9.3)
   - HandyJSON (~> 5.0.2)
   - Kingfisher (~> 6.0.1)
-  - Moya/RxSwift (= 14.0.0)
+  - Moya/RxSwift (= 15.0.0)
   - ProgressHUD (~> 13.4)
-  - RxCocoa (~> 5.1.1)
-  - RxDataSources (~> 4.0.1)
-  - RxGesture (~> 3.0.2)
-  - RxWebKit (~> 1.0.2)
+  - RxCocoa (~> 6.5.0)
+  - RxDataSources (~> 5.0)
+  - RxGesture (~> 4.0.4)
+  - RxWebKit (from `https://github.com/RxSwiftCommunity/RxWebKit.git`)
   - SwiftyJSON (~> 5.0.0)
   - Toast-Swift (~> 5.0.1)
 
@@ -56,27 +56,35 @@ SPEC REPOS:
     - RxGesture
     - RxRelay
     - RxSwift
-    - RxWebKit
     - SwiftyJSON
     - Toast-Swift
 
+EXTERNAL SOURCES:
+  RxWebKit:
+    :git: https://github.com/RxSwiftCommunity/RxWebKit.git
+
+CHECKOUT OPTIONS:
+  RxWebKit:
+    :commit: 6225dd5792fc8010d2399814c89a3683a4c87ec6
+    :git: https://github.com/RxSwiftCommunity/RxWebKit.git
+
 SPEC CHECKSUMS:
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
-  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   Kingfisher: adde87a4f74f6a3845395769354efff593581740
-  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
-  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
-  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
-  RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
-  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
-  RxWebKit: a3085e7cd8b57182b452692686675702474014dd
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxGesture: f3efb47ed2d26a8082f7b660d4a59970e275a7f8
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  RxWebKit: 350129c3969a3d330d2a7343fdb8a6904edf0e49
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: fb59931ceb7d5f08a50bb8cb8a8f278826c12c72
+PODFILE CHECKSUM: 2de83b03d1a0415f9f675df09eb4220de4faf941
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.12.0
