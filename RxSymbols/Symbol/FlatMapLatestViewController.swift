@@ -15,14 +15,6 @@ class FlatMapLatestViewController: BaseViewController {
         title = "组合"
 //        flatMapAndFlatMapLatest()
         //    flatMapAndConcat()
-        Task{
-            do {
-               let result = try await flatMapAndConcatWithAsync()
-                print("result --- \(result)")
-            } catch let error {
-                print("error -- \(error)")
-            }
-        }
     }
     
     func flatMapAndFlatMapLatest(){
@@ -71,6 +63,19 @@ class FlatMapLatestViewController: BaseViewController {
         
     }
     
+    func getManyElementsWithAsync() async throws {
+        let netA = getManyElement().values
+        do {
+          for try await value in netA {
+              print(value) // Next event
+          }
+          // Completed here
+        } catch {
+          // Error event
+          print("An error occurred:", error.localizedDescription)
+        }
+    }
+    
     
 }
 extension FlatMapLatestViewController{
@@ -82,5 +87,14 @@ extension FlatMapLatestViewController{
     }
     func getThird(content:String) -> Observable<String> {
         return Observable.just("这是第三个\(content)").delay(.seconds(2), scheduler: MainScheduler.instance)
+    }
+    func getManyElement() -> Observable<String> {
+        return Observable.create { ob in
+            ob.onNext("this is 1")
+            ob.onNext("this is 2")
+            ob.onNext("this is 3")
+            ob.onCompleted()
+            return Disposables.create()
+        }
     }
 }
