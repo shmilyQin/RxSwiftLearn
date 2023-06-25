@@ -37,7 +37,16 @@ extension TraitsViewController{
         return Maybe.create { (ob) -> Disposable in
             ob(.success("1111"))
             //      ob(.error(<#T##Error#>))
+            //      OR
             //      ob(.completed)
+            return Disposables.create()
+        }
+    }
+    func infallible() -> Infallible<String> {
+        //    Infallible简单来说就是一个不会发出error事件的序列.
+        return Infallible.create { ob in
+            ob(.next("2222"))
+            ob(.completed)
             return Disposables.create()
         }
     }
