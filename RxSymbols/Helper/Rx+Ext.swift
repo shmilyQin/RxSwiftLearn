@@ -28,9 +28,9 @@ extension Reactive where Base:MoyaProviderType{
                 ProgressHUD.dismiss()
                 switch result {
                 case let .success(response):
-                        print("-----------------------------------------------")
-                        print(try? JSON.init(data: response.data))
-                        print("-----------------------------------------------")
+                    print("-----------------------------------------------")
+                    print(try? JSON.init(data: response.data))
+                    print("-----------------------------------------------")
                     let model = ResponseModel.init(response.data)
                     if model.status == 401{
                         single(.failure(ResponseError(model.msg)))
