@@ -7,7 +7,18 @@
 
 import Foundation
 import HandyJSON
-struct NewsDetailModel:HandyJSON {
+
+struct NewsDetailModel: HandyJSON {
+    var date = ""
+    var title = ""
+    var category = ""
+    var url = ""
+    var thumbnail_pic_s = ""
+    var uniquekey = ""
+    var author_name = ""
+}
+
+struct NewListModel: Decodable {
     var date = ""
     var title = ""
     var category = ""

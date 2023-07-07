@@ -8,6 +8,12 @@
 import UIKit
 import RxCocoa
 import RxSwift
+
+struct LYError: Error {
+  var des=""
+}
+
+
 class SingleSymbolViewController: BaseViewController {
   
   override func viewDidLoad() {

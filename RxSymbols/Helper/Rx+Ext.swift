@@ -10,12 +10,7 @@ import RxSwift
 import Moya
 import SwiftyJSON
 import ProgressHUD
-struct ResponseError:Error {
-    var desc = ""
-    init(_ desc:String) {
-        self.desc = desc
-    }
-}
+
 extension Reactive where Base:MoyaProviderType{
     func LYRequest(_ api: Base.Target, callbackQueue: DispatchQueue? = nil , showHub:Bool = true,showResultHub:Bool = true) -> Single<ResponseModel> {
         return Single.create { [weak base] single -> Disposable in
@@ -33,15 +28,15 @@ extension Reactive where Base:MoyaProviderType{
                     print("-----------------------------------------------")
                     let model = ResponseModel.init(response.data)
                     if model.status == 401{
-                        single(.failure(ResponseError(model.msg)))
+                        single(.failure(NetworkError.other(model.msg)))
                     }else if model.status == 0{
                         single(.success(model))
                     }else{
-                        single(.failure(ResponseError(model.msg)))
+                        single(.failure(NetworkError.other(model.msg)))
                     }
                 case let .failure(error):
                     print("错误状态码:\((error.response?.statusCode ?? 0))")
-                    single(.failure(ResponseError("无法链接")))
+                    single(.failure(NetworkError.other(error.localizedDescription)))
                 }
             })
             return Disposables.create {

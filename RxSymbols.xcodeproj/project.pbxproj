@@ -56,6 +56,7 @@
 		47F09009259C7A94008D1657 /* TraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09008259C7A94008D1657 /* TraitsViewController.swift */; };
 		47FECB3E259D65EA000FE39D /* ObservableAndObserverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FECB3D259D65EA000FE39D /* ObservableAndObserverViewController.swift */; };
 		47FECB41259D7858000FE39D /* ControlEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FECB40259D7858000FE39D /* ControlEventViewController.swift */; };
+		8E400F9D2A57E5770007B07C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E400F9C2A57E5770007B07C /* NetworkError.swift */; };
 		C23A451DB3C9932CB42D466C /* Pods_RxSymbols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFBFB18D4DDE2E68E7C3C7E /* Pods_RxSymbols.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		47F09008259C7A94008D1657 /* TraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsViewController.swift; sourceTree = "<group>"; };
 		47FECB3D259D65EA000FE39D /* ObservableAndObserverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableAndObserverViewController.swift; sourceTree = "<group>"; };
 		47FECB40259D7858000FE39D /* ControlEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlEventViewController.swift; sourceTree = "<group>"; };
+		8E400F9C2A57E5770007B07C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FB6316F93CEE2D7696D75B7A /* Pods-RxSymbols.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSymbols.release.xcconfig"; path = "Target Support Files/Pods-RxSymbols/Pods-RxSymbols.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 				47415E3B25DF49C400BF6F89 /* ResponseModel.swift */,
 				47415E4A25DF556A00BF6F89 /* API.swift */,
 				475450FD26677D490086401E /* HomeApi.swift */,
+				8E400F9C2A57E5770007B07C /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				4784768C2592EA3200507C48 /* SceneDelegate.swift in Sources */,
 				47C0A81825E48FA6009308C1 /* InvokeJSFunctionViewController.swift in Sources */,
 				475450FA266737BF0086401E /* ExampleViewController.swift in Sources */,
+				8E400F9D2A57E5770007B07C /* NetworkError.swift in Sources */,
 				47B44E1C2594883900F9EB51 /* ESRefresh+Ext.swift in Sources */,
 				47B44E202594885100F9EB51 /* RefreshViewController.swift in Sources */,
 			);
@@ -625,8 +629,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qinsunbo.RxSymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -646,8 +653,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qinsunbo.RxSymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

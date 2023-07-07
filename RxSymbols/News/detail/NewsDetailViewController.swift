@@ -19,6 +19,16 @@ class NewsDetailViewController: BaseViewController {
         super.viewDidLoad()
         initInterface()
         initDataSource()
+        
+        lyApiProvider.rx.LYRequest(.news_detail(type: type))
+            .mapModel(type: [NewListModel].self, designatedPath: "result.data")
+            .subscribe { list in
+                print("list----\(list)")
+            } onFailure: { error in
+                print("error----\(error)")
+            }.disposed(by: disposeBag)
+
+
     }
     func addRightItem(){
         rightItem.title = "刷新"

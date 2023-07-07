@@ -8,9 +8,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
-struct LYError: Error {
-  var des=""
-}
+
 class SymbolViewController: BaseViewController {
   
   override func viewDidLoad() {
