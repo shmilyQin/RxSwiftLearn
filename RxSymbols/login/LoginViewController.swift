@@ -19,19 +19,15 @@ class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //    view.addSubview(userNameField)
-        //    view.addSubview(tipLabel)
-        //    view.addSubview(pswTextField)
-        //    view.addSubview(pswTipLabel)
-        //    view.addSubview(loginBtn)
-        //    view.addSubview(activityIndicator)
-        //    //    view.addSubview(loginView)
-        //    bindData()
-        //    bindViewModel()
-        view.addSubview(loginView)
-        //    loginView.rx.methodInvoked(#selector(LoginView.test)).subscribe(onNext: { info in
-        //      print(info)
-        //    }).disposed(by: disposeBag)
+        view.addSubview(userNameField)
+        view.addSubview(tipLabel)
+        view.addSubview(pswTextField)
+        view.addSubview(pswTipLabel)
+        view.addSubview(loginBtn)
+        view.addSubview(activityIndicator)
+        bindData()
+        bindViewModel()
+//        view.addSubview(loginView)
     }
     func bindViewModel(){
         viewModel = LoginViewModel()
